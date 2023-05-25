@@ -10,16 +10,6 @@
     <!-- defines the action which is going to be performed on form submission.
     You add a file path in this action, this file contains tha server-side(backend)
     code which handles your form data. -->
-
-    <!-- <div>
-        <nav class=" navbar">
-            <a href="#">Books</a>
-            <a href="#">Register</a>
-            <a href="#">Contact Us</a>
-            <a href="#">Logout</a>
-        </nav>
-    </div> -->
-
     <form method="post" action="file.js" name="form" id="form">
         <div>
             <label for="fname">Name*:</label> <br>
@@ -31,7 +21,7 @@
         </div>
         <div>
             <label for="age">Age:</label> <br>
-            <input type="number"  max="40"  name="age" id="age" required>
+            <input type="number"  max="1000"  name="age" id="age" required>
         </div>
         <div>
             <label for="email">Email:</label> <br>
@@ -82,6 +72,22 @@
             <input type="reset" disabled>
         </div>
 
+        <!-- <div>
+            <label for="extra-input">Extra Input Types</label>
+            <input type="color"> <br>
+            <input type="date"> <br>
+            <input type="month"> <br>
+            <input type="week"> <br>
+            <input type="file"> <br>
+            <input type="image" src="../assets/web.jpg" width="100px"> <br>
+            <input type="url"> <br>
+            <input type="range"> <br>
+            <input type="hidden">
+            <input type="button" value="Submit">
+            <button>Submit</button>
+            <input type="search">
+
+        </div> -->
     </form>
     
 </body>
