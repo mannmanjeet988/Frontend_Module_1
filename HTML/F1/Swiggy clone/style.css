@@ -1,0 +1,122 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Mulish', sans-serif;
+}
+
+body{
+    font-weight: 300;
+    color: #282c3f;
+}
+
+/* navbar section */
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    height: 80px;
+    background-color: white;
+    z-index:1000;
+    padding: 0 20px;
+}
+
+.navbar .nav{
+    max-width:1200px;
+    min-width:1200px;
+    position: relative;
+    margin: 0 auto;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav .left{
+    display: flex;
+    align-items: center;
+}
+
+.nav .left .logo{
+    /* display : block; */
+    height : 45%;
+    margin-right: 20px;
+    transition: transform 0.3 cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.left .logo:hover{
+    transform : scale(1.1);
+}
+
+.location-div{
+    display: flex;
+    column-gap: 10px;
+}
+
+.location-div .other{
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 2px solid black;
+    transform: translateY(-3%);
+}
+
+.location-div .other:hover{
+    color: orangered;
+    border-bottom : 2px solid orangered;
+}
+
+.location-div .location{
+    font-size: 14px;
+    font-weight:500 ;
+     color: rgba(2, 6, 12, 0.6);
+}
+
+.location-div .fa-angle-down{
+    position: absolute;
+    top:50%;
+    transform: translateY(-60%);
+    color: orangered;
+}
+
+.right {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+    align-items: center;
+}
+
+.right .items a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(2, 6, 12, 0.6);
+    
+}
+
+.items svg{
+    margin-right: 5px;
+    transform: translateY(9%);
+}
+
+.right .items a:hover{
+    color: orangered;
+    cursor: pointer;
+}
+
+/* content section */
+.restaurants .container{
+    max-width: 1200px;
+    min-width: 1200px;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 42px;
+    top: 80px;
+    background-color: #fff; 
+     left: 31px;
+}
+
+.container .item-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }

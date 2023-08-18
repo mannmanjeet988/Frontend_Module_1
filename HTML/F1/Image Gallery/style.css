@@ -1,0 +1,121 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    /* max-height:min-content; */
+}
+
+
+
+.container{
+    margin:0% 12%;                       
+    display: grid;                
+    /* grid-template-columns: repeat(autofit,minmax(20%,1fr));
+    grid-template-rows: 180px; */
+     grid-template-columns: repeat(3,33%); 
+    /* padding: 20px; */
+    background-color:white;
+    /* object-position: center; */
+    /* grid-gap : 5px; */
+    /* overflow-y: hidden; */
+    /* height:60%; */
+    /* opacity:0.5; */
+    
+    
+}
+
+.container{                           
+    /* margin: 12%; */
+    display: flex;
+    /* grid-template-columns: repeat(autofit,minmax(20%,1fr));
+    grid-template-rows: 180px; */
+     flex-wrap: wrap;
+       gap: 0px;
+    /* padding: 20px; */
+    background-color:white;
+    justify-content: center;
+align-items: center;
+
+    /* object-position: center; */
+    /* grid-gap : 5px; */
+    overflow-y: hidden;
+    
+    /* opacity:0.5; */  
+}
+
+.image1,.image2,.image3,.image4,.image5,.image6,.image7,.image8,.image9{
+width:33%;
+}
+
+/* .grid-wrapper > div{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+ /* img:hover{
+    transform:scale(1.5);
+    border-radius: 20px;
+}  */
+
+ .container img{
+    width:100%;
+    height:100%;
+    border:1px solid rgba(137, 43, 226, 0.918);
+    object-fit: cover;
+    padding: 2px;
+    
+}
+
+
+ /* for uneven gallery, use grid-template-columns: repeat(5,20%); and then apply below span size */
+/* .image1, .image8{
+    grid-row:span 2;
+}
+
+.image4, .image7{
+    grid-column:span 2;
+}
+
+
+.image9{
+    grid-row:span 2;
+    grid-column:span 4;
+}
+  */
+
+  @media screen  and (max-width:800px){
+    .container{
+        /* margin:0% 12%; */
+        display: grid;
+        /* grid-template-columns: repeat(autofit,minmax(20%,1fr));
+        grid-template-rows: 180px; */
+         grid-template-columns: repeat(2,48%); 
+        /* padding: 20px; */
+        background-color:white;
+        /* object-position: center; */
+        /* grid-gap : 5px; */
+        /* overflow-y: hidden; */
+        height:60%;
+        /* opacity:0.5; */  
+        
+    }
+  }
+
+  @media screen and (max-width:500px){
+    .container{
+        margin:10px 15%;
+        display: grid;
+        /* grid-template-columns: repeat(autofit,minmax(20%,1fr));
+        grid-template-rows: 180px; */
+         grid-template-columns: repeat(1,90%); 
+        /* padding: 20px; */
+        background-color:white;
+        /* object-position: center; */
+        /* grid-gap : 5px; */
+        /* overflow-y: hidden; */
+        height:60%;
+        /* opacity:0.5; */  
+        
+    }
+  }

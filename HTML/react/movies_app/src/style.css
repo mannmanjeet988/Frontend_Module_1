@@ -1,0 +1,33 @@
+.movie-list{
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+    color:blueviolet;
+    justify-content: center;
+    align-items: center;
+   gap:-40px;
+}
+
+.movie-display{
+    display: flex;
+    flex-direction: column;
+    background-color: aquamarine;
+    color:brown;
+    justify-content: center;
+    align-items: center;
+}
+
+.info{
+    color:black;
+}
+
+.heading{
+    color:black;
+    background-color: antiquewhite;
+    text-align:center;
+    /* display:inline; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding:10px;
+    border-radius: 5px;
+}
+

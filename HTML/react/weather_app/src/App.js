@@ -1,0 +1,67 @@
+import React,{useState} from "react"
+
+import './style.css';
+
+function App() {
+
+  const [lat, setLat] = useState("");
+      const [long, setLong] = useState("");
+      const [hemisphere , setHemisphere] = useState(null);
+      //  const [month,setMonth] = useState("");
+
+
+      function findLocation(){
+        if(navigator.geolocation){
+          navigator.geolocation.getCurrentPosition((position)=>{
+                   console.log(position.coords.latitude);
+                   setLat(position.coords.latitude);
+                   setLong(position.coords.longitude);
+                   updateHemisphere(position.coords.latitude)
+          })
+        }
+      }
+
+      function updateHemisphere(lat){
+        if(lat < 0){
+            setHemisphere("Southern Hemisphere")
+        } else if (lat > 0){
+          setHemisphere("Northern Hemisphere")
+        } else {
+          setHemisphere("Equator")
+        }
+      }
+ 
+      function updateSeason(){
+        const date = new Date;
+        console.log(date);
+        const currMonth=date.getMonth();    // 0 to 11
+        console.log(currMonth)
+        // setMonth(currMonth);
+        if((hemisphere==="Northern Hemisphere" && (currMonth >=2 && currMonth <=8)) || //March to september
+          (hemisphere==="Southern Hemisphere" && (currMonth ===0 || currMonth ===1 || currMonth ===9 || currMonth ===10 || currMonth ===11 ))){  
+      
+        }   
+        else if((hemisphere==="Southern Hemisphere" && (currMonth >=2 && currMonth <=8)) ||
+        (hemisphere==="Northern Hemisphere" && (currMonth ===0 || currMonth ===1 || currMonth ===9 || currMonth ===10 || currMonth ===11 ))){
+          <h1>Season : Winter Season</h1>
+        }
+      }
+      
+  return (
+    <div className="App">
+       {
+       findLocation()
+       }
+        {/* <button onClick={findLocation}>Find My Location</button> */}
+       <h1>Latitude: <span className="updatedValue" >{lat}</span></h1>
+       <h1>Longitude: <span className="updatedValue" >{long}</span></h1>
+       <h1>Hemisphere: <span className="updatedValue" >{hemisphere}</span></h1>   
+       {/* <h1>Season: <span className="updatedValue" >Winter</span></h1>   */}
+       {
+        (hemisphere!==null) && updateSeason()
+       }
+    </div>
+  );
+}
+
+export default App;

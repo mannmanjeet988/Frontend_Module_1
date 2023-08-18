@@ -1,0 +1,39 @@
+.about-us h1 span{
+    color: #65a7da;
+}
+
+
+.navbar{
+    min-height:70px;
+    position:realtive
+}
+
+
+ .about-us{
+    position:absolute;
+    top:100px;
+    /* min-height: 200px; */
+}
+
+.instructors{
+    position:absolute;
+    top:520px;
+    /* min-height: 00px; */
+}
+
+
+.about-us .btn{
+    background-color: #65a7da;
+    border: none;
+}
+
+.newsletter{
+    background-color: #65a7da ;
+    position:absolute;
+    top:400px;
+    
+}
+   
+.btn-group{
+    margin-right: 10px;
+}
