@@ -4,10 +4,11 @@ import './style.css';
 
 function App() {
 
-  const [lat, setLat] = useState("");
+     const [lat, setLat] = useState("");
       const [long, setLong] = useState("");
       const [hemisphere , setHemisphere] = useState(null);
       //  const [month,setMonth] = useState("");
+
 
 
       function findLocation(){
@@ -39,11 +40,14 @@ function App() {
         // setMonth(currMonth);
         if((hemisphere==="Northern Hemisphere" && (currMonth >=2 && currMonth <=8)) || //March to september
           (hemisphere==="Southern Hemisphere" && (currMonth ===0 || currMonth ===1 || currMonth ===9 || currMonth ===10 || currMonth ===11 ))){  
-      
+            // let a=document.getElementsByClassName("season-span")[0].innerHTML="summer Season";
+            document.getElementsByClassName("season-span")[0].innerHTML=`<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwFxaoDc-T1thHmcx7FsHc9cXVncE64NyXjg&usqp=CAU"> `;
+            //console.log("Summer season",a);
         }   
         else if((hemisphere==="Southern Hemisphere" && (currMonth >=2 && currMonth <=8)) ||
         (hemisphere==="Northern Hemisphere" && (currMonth ===0 || currMonth ===1 || currMonth ===9 || currMonth ===10 || currMonth ===11 ))){
-          <h1>Season : Winter Season</h1>
+          console.log("Winter season")
+          document.getElementsByClassName("season-span")[0].innerHTML=`<img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl6azF9kM9KKt7jgWwkd76zm8w-MFcHvytHg&usqp=CAU" />`
         }
       }
       
@@ -56,6 +60,7 @@ function App() {
        <h1>Latitude: <span className="updatedValue" >{lat}</span></h1>
        <h1>Longitude: <span className="updatedValue" >{long}</span></h1>
        <h1>Hemisphere: <span className="updatedValue" >{hemisphere}</span></h1>   
+       <h1><span className=" season-span updatedValue"></span></h1>   
        {/* <h1>Season: <span className="updatedValue" >Winter</span></h1>   */}
        {
         (hemisphere!==null) && updateSeason()
